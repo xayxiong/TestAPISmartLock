@@ -1,0 +1,76 @@
+### test 
+##Get access token
+POST  https://euapi.sciener.com/oauth2/token HTTP/1.1
+
+
+
+
+
+###
+POST https://euapi.sciener.com/v3/key/send
+
+
+
+
+
+
+
+
+
+###Get the lock list of an account
+GET https://euapi.sciener.com/v3/lock/list?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&pageNo=1&pageSize=20&date=1662698840085
+content-type: application/json
+
+
+### Request
+GET https://euapi.sciener.com/v3/key/get?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&lockId=6523400&date=1662697734599 HTTP/1.1
+content-type: application/json
+
+
+
+#####
+#### response
+# {
+#   "date": 1662538975000,
+#   "specialValue": 566546933,
+#   "lockAlias": "XNK3_969729",
+#   "keyStatus": "110401",
+#   "endDate": 0,
+#   "noKeyPwd": "887247360",
+#   "keyId": 65074890,
+#   "lockMac": "E8:70:71:29:97:96",
+#   "deletePwd": "",
+#   "timezoneRawOffset": 25200000,
+#   "featureValue": "10021C4D1F5",
+#   "lockId": 6523400,
+#   "electricQuantity": 100,
+#   "lockData": "kfRHEPts2FJOSuTgvQEjwrdZ51YTgWSxXYc9U3vAZ8uRDtazmBKHIDqJNr0/N0t/kHY1FzNhhTbG8rzgFFLEL2zWi0bKySoZW3fcZvJwTjLHrk2rQ315+xVJ8yJbjSBmhV9qu2yXEOTnYoDm5HpNIxcPdJzdv6QDcFATItu1DYJqopdlX1ixWLCL/kL1UKwDwvPi+r4WoG9VVUtQK8k5PfzpGZC8Zg8JgVpbfx21MVzyQofjSD+f7kGryUc+JHI+4ktYQEXW+1GIkUrKh/RA7jbtjVkW90njtPX0XkyQzv8InCInJq4+kS07O5DJJqMWVYHGGhdzCqfnI7BBiRbIHu/I8PL4S4Rcs5AzvG02IoeEHX0hYLsDtKig0WImc/UkBQLtC46WAFwnjkz64UdXZI1vJl80XBLnwOzaJUB0DNxl0DDNKJfIYwukaixYDRuHxW+cPYxq5iK7kyWAHDo8J7AQHYBdMdfqt6eTlPPm9rHH3SxUpat5f7tXZoksxP5acY6iY+DYYkp1FCvk2YcdzjfUMUyZxzRDwOTIcDvXjGY8Zw02VDepdxldqAVHbb9OzTDl7S6NUavIZgdJPhMkjOERhkcQUm3bGB6AI4Hd8/aqvo0GM4T406aAcOzBLubNaLWOvdJKCUjzN3vHUQrKZK0wBCdCyZXYp1C94LKQT7+z03HlkiGW5zWBHMRmrYtBEfXDuHu/7yFopoXBsknVEuhwcSmXlg==",
+#   "keyboardPwdVersion": 4,
+#   "remoteEnable": 2,
+#   "lockVersion": {
+#     "showAdminKbpwdFlag": true,
+#     "groupId": 10,
+#     "protocolVersion": 3,
+#     "protocolType": 5,
+#     "orgId": 67,
+#     "logoUrl": "",
+#     "scene": 2
+#   },
+#   "userType": "110301",
+#   "lockName": "XNK3_969729",
+#   "startDate": 0,
+#   "remarks": "",
+#   "keyRight": 0
+# }
+
+
+#####
+POST https://example.com/comments HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
