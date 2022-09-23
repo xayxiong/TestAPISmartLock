@@ -134,6 +134,29 @@ content-type: application/json
 
 GET https://euapi.sciener.com/v3/lock/listKey?clientId=fd2ff35ee3d8424c8665c07b7b9a7f45&accessToken=780f7671b6e6be3010d9787f19207aca&lockId=1719&pageNo=1&pageSize=20&date=1625025703000
 content-type: application/json
+
+
+
+
+
+
+
 ###Delete the ekey
 POST https://euapi.sciener.com/v3/key/delete
 content-type: application/json
+
+
+
+###Get ekeys of a lock
+
+###Delete the ekey
+
+###Freeze the ekey
+
+###Unfreeze the ekey
+
+###Change the valid time of the ekey
+
+###Key authorization
+
+###Cancel key authorization
