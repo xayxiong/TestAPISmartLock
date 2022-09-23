@@ -2,6 +2,20 @@
 POST https://euapi.sciener.com/v3/lock/initialize
 content-type: application/json
 
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockData":"kfRHEPts2FJOSuTgvQEjwuFzL8OxOBHBOC7d+6BrY4xvRhocJjGnw0nWNXFEUEQEDleaLfmSmGIfqGsK7jo1xfqV52+Kvx0FURZwPQSa640I5V/QWARDmhesXh3KLFcvBAFdpV2P8DB35jy01hX7pWqGvoGIfmF23VUs61U3bYeEwhw/Be7KxW9oEGnHxASZn6Kzic7PnTeZBNRcE/x/b9oDXDvDoTWw+5641MDks3XJLc8W4+fRSpUHTC2FuW9ktU1oUW9UxiOVZH3MKmLYxSRAZ9NLwTEBEB9dx2Fi3pNqgVZH2XcR806DmnUv02nmrxMwhLilmddE9j2aFdvZzj4jmOxukJh1iQytF2j4jvFrboUcdj62DjIn3c1vaEWILCo7Pu1Na9AZFQqbpzc2233U1+gg7Rf5u1Td/397ZpYQVw0nU1r4JJRVoEFFV7pqPcP/wTca4DzZiPUliC7EASaSyKw9Eh+XQoxeZ39ugp7RM7UUMuVRMws7ZimOwAGFR96Zo7tm/MmvIGS4zkEGvqKwE2dDCydpdmXMiFwPH7CpGShdWIn0jRUcfqGiAEN4SGjxqN3GYa1lhzwRa+Ep4PH0rxeF72TML+kUoQ6H3k2/c593gYZ5yIeW4286luR4vx2U6ITcmnwdpewE/rc/aVD+Oo8X562K+QuIL8qQscb8g5jTsvtSw3vC3FEpYMpHpowEwz3wD9SXx1nYhRYQLaGgY0zk0fr+4QhnXzSfKG7LKfg94kzh8qmyeITOhVPLKe5UsCvGYhnrfT24ugGPIuhwcSmXlg==",
+    "lockAlias"
+    "groupId"
+    "nbInitSuccess"
+    "date":"1663905790288"
+}
+
+
+
+
 ###Get the lock list of an account
 GET https://euapi.sciener.com/v3/lock/list?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&pageNo=1&pageSize=20&date=1663831526335
 
@@ -58,14 +72,14 @@ content-type: application/json
 # }
 
 ###Get lock details
-GET https://euapi.sciener.com/v3/lock/list?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&pageNo=1&pageSize=20&date=1663132423931
+GET https://euapi.sciener.com/v3/lock/detail?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&lockId=6523400&date=1663906490703
 content-type: application/json
 
 {
     "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
     "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
    " lockId ":"6523400",
-   "date":"1663136040553"
+   "date":"1663906490703"
 }
 
 
@@ -121,13 +135,13 @@ content-type: application/json
 {
     "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
     "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
-   " lockId ":"6523400",
-   "date":"1663136040553"
+    "lockId":"6523400",
+    "date":"1663906771702"
 }
 
 
 
-
+###response
 # {
 #     "errcode": 0,
 #     "errmsg": "none error message or means yes",
@@ -140,14 +154,135 @@ content-type: application/json
 POST https://euapi.sciener.com/v3/lock/updateLockData
 content-type: application/json
 
-###Set auto lock time
-POST https://euapi.sciener.com/v3/lock/setAutoLockTime
-content-type: application/json
 {
     "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
     "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
-   " lockId ":"6523400",
-   "seconds":"10",
-   "type":"2",
-   "date":"1663136040553"
+    "lockId":"6523400",
+    "lockData":"kfRHEPts2FJOSuTgvQEjwuFzL8OxOBHBOC7d+6BrY4xvRhocJjGnw0nWNXFEUEQEDleaLfmSmGIfqGsK7jo1xfqV52+Kvx0FURZwPQSa640I5V/QWARDmhesXh3KLFcvBAFdpV2P8DB35jy01hX7pWqGvoGIfmF23VUs61U3bYeEwhw/Be7KxW9oEGnHxASZn6Kzic7PnTeZBNRcE/x/b9oDXDvDoTWw+5641MDks3XJLc8W4+fRSpUHTC2FuW9ktU1oUW9UxiOVZH3MKmLYxSRAZ9NLwTEBEB9dx2Fi3pNqgVZH2XcR806DmnUv02nmrxMwhLilmddE9j2aFdvZzj4jmOxukJh1iQytF2j4jvFrboUcdj62DjIn3c1vaEWILCo7Pu1Na9AZFQqbpzc2233U1+gg7Rf5u1Td/397ZpYQVw0nU1r4JJRVoEFFV7pqPcP/wTca4DzZiPUliC7EASaSyKw9Eh+XQoxeZ39ugp7RM7UUMuVRMws7ZimOwAGFR96Zo7tm/MmvIGS4zkEGvqKwE2dDCydpdmXMiFwPH7CpGShdWIn0jRUcfqGiAEN4SGjxqN3GYa1lhzwRa+Ep4PH0rxeF72TML+kUoQ6H3k2/c593gYZ5yIeW4286luR4vx2U6ITcmnwdpewE/rc/aVD+Oo8X562K+QuIL8qQscb8g5jTsvtSw3vC3FEpYMpHpowEwz3wD9SXx1nYhRYQLaGgY0zk0fr+4QhnXzSfKG7LKfg94kzh8qmyeITOhVPLKe5UsCvGYhnrfT24ugGPIuhwcSmXlg==",
+    "date":"1663907191854",
 }
+
+
+### Change lock name
+POST https://euapi.sciener.com/v3/lock/rename
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "lockAlias":"XNK3_969729",
+    "date":"1663907813313"
+}
+
+###Change the super passcode
+POST https://euapi.sciener.com/v3/lock/changeAdminKeyboardPwd
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "password":"061383902",
+    "changeType":"",
+    "date":"1663908638854"
+}
+
+
+###Transfer Lock
+POST https://euapi.sciener.com/v3/lock/transfer
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "receiverUsername":"kengxiong36@gmail.com",
+    "lockIdList":"123456",
+    "date":"1663909375341"
+}
+
+
+
+###Upload lock battery
+POST https://euapi.sciener.com/v3/lock/updateElectricQuantity
+content-type: application/json
+
+
+###Set auto lock time
+POST https://euapi.sciener.com/v3/lock/setAutoLockTime
+content-type: application/x-www-form-urlencoded 
+
+  clientId = 24bd4a0e257a48f1a32b20b52cfbe6db
+    &accessToken = f1611d9a718cb6df1b63dab1870c2cf8
+    &lockId = 6523400
+    &seconds=10
+    &type=2
+    &date=1663136040553
+  
+
+
+
+
+###Config the passage mode of a 
+POST https://euapi.sciener.com/v3/lock/configPassageMode
+content-type: application/json 
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "passageMode":"1",
+    "startDate":"",
+    "endDate":"",
+    "isAllDay":"",
+    "weekDays":"",
+    "autoUnlock":"",
+    "type":"1",
+    "date":"1663912771550",
+
+}
+
+
+
+###Get the passage mode configu
+GET  https://euapi.sciener.com/v3/lock/getPassageModeConfig?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&lockId=6523400&date=1663913174394
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "date":"1663913174394"
+}
+
+
+### Set hotel card sector
+POST https://euapi.sciener.com/v3/lock/setHotelCardSector
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "sector":"12345678910",
+    "date":"1663913174394"
+}
+
+###Modify lock settings
+POST https://euapi.sciener.com/v3/lock/updateSetting
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "type":"2",
+    "value":"1",
+    "changeType":"1",
+    "date":"1663914049065"
+}
+
+###Query lock settings
+POST https://euapi.sciener.com/v3/lock/querySetting
+content-type: application/json
+
