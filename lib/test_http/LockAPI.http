@@ -1,0 +1,153 @@
+###Lock initialize
+POST https://euapi.sciener.com/v3/lock/initialize
+content-type: application/json
+
+###Get the lock list of an account
+GET https://euapi.sciener.com/v3/lock/list?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&pageNo=1&pageSize=20&date=1663831526335
+
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockAlias":,
+    "groupId":"",
+    "pageNo":"1",
+    "pageSize":"20",
+    "date":"1663831526335"
+
+}
+
+
+
+# {
+#     "list": [
+#         {
+#             "date": 1662538975000,
+#             "specialValue": 566546933,
+#             "lockAlias": "XNK3_969729",
+#             "noKeyPwd": "887247360",
+#             "electricQuantityUpdateDate": 1662538975000,
+#             "lockMac": "E8:70:71:29:97:96",
+#             "passageMode": 2,
+#             "timezoneRawOffset": 25200000,
+#             "lockId": 6523400,
+#             "featureValue": "10021C4D1F5",
+#             "electricQuantity": 100,
+#             "bindDate": 1662538975000,
+#             "lockData": "kfRHEPts2FJOSuTgvQEjwuFzL8OxOBHBOC7d+6BrY4xMC4u3QztcSRR1pWD4zmVKKovy0bVKZZTFbwtZcEXaazChJpwvXcBgpXbnPBniB41ayp5Qk7b+u67CFbGuaZFr55mhXj9dXtXgI4qzgYWsMGEFP+OzaZyAogSWeU4zWmd1prlW1sBYWHGLBheD82FjyTGj+cY6f2lSfEzaQH0+bK6UYzr0j+K9LH5M3Vlg6wNRodUO2jC6WbwfsQEEdi3so9vMxOBktIodIKkGTWMKvlzL3H7HHo1S4EUrGAq5LQKNE1FXd9QFN05MnRiERLZyhWEMQ46gEjJNs/b2DZ7h0uUg7xRQ2A/T+TLugc+Ebro2Tcc7M38mlgRChjAPpQ5c42JTCgNo9PkcLqYVA+XHoMJalGgKXxjusVwjyS+LqIPdwyw2aTFWNPPRa1pHebYBo5TFdEUHLRFpURgus2mU4F7uqesCNapvH2+iY8ATHSlTJozsoWj3zK6yUxD/XaMXFOH4Go3OVfRX9ETFfwat9rjAeIcnbeU5VojS8KbrFBo4QHn2St9glMCsSKya6tfOWduMViP03q9x0XbbxW03ziu6X8kIbf4caxdX/o8Rtw+W09EFrRbkuhwHtqMERR+9udHlBUa20nhTPZ7aTBrYdmUdK4H5wXQPwQBapNXX6nl+mqasMYaRRG6SNAQ+iG882xpxSI2vdoVgEvRzemyXkjAia3GYldd+yBsJQn9tceIpGurCO1Hj0QbdVBznLXU6Xjh/H9iqSKDVHdmQqv9D9lYYztwvx/e9hHcoBXKzvODocHEpl5Y=",
+#             "hasGateway": 0,
+#             "keyboardPwdVersion": 4,
+#             "wirelessKeypadFeatureValue": "0",
+#             "lockVersion": {
+#                 "showAdminKbpwdFlag": true,
+#                 "groupId": 10,
+#                 "protocolVersion": 3,
+#                 "protocolType": 5,
+#                 "orgId": 67,
+#                 "logoUrl": "",
+#                 "scene": 2
+#             },
+#             "lockName": "XNK3_969729"
+#         }
+#     ],
+#     "pageNo": 1,
+#     "pageSize": 20,
+#     "pages": 1,
+#     "total": 1
+# }
+
+###Get lock details
+GET https://euapi.sciener.com/v3/lock/list?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&pageNo=1&pageSize=20&date=1663132423931
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+   " lockId ":"6523400",
+   "date":"1663136040553"
+}
+
+
+
+
+# {
+#     "date": 1662538975000,
+#     "lockAlias": "XNK3_969729",
+#     "lockSound": 1,
+#     "modelNum": "SN292-REAL-FPC1201_PV53",
+#     "lockMac": "E8:70:71:29:97:96",
+#     "privacyLock": 2,
+#     "deletePwd": "",
+#     "featureValue": "10021C4D1F5",
+#     "adminPwd": "NjgsNjgsNzEsNjQsNjYsNzAsNjYsNjgsNjgsNjQsMTA=",
+#     "soundVolume": 5,
+#     "hasGateway": 0,
+#     "autoLockTime": 5,
+#     "lockKey": "NjgsNjksNjcsNjcsNzcsNjQsNzYsNjYsNzAsNjQsMTA=",
+#     "lockName": "XNK3_969729",
+#     "resetButton": 1,
+#     "firmwareRevision": "5.0.1.201113",
+#     "tamperAlert": 2,
+#     "specialValue": 566546933,
+#     "displayPasscode": 0,
+#     "noKeyPwd": "887247360",
+#     "passageMode": 2,
+#     "passageModeAutoUnlock": 2,
+#     "timezoneRawOffset": 25200000,
+#     "lockId": 6523400,
+#     "electricQuantity": 100,
+#     "lockFlagPos": 1,
+#     "lockUpdateDate": 1662627205000,
+#     "keyboardPwdVersion": 4,
+#     "aesKeyStr": "7c,3b,8a,09,ef,88,97,b8,6e,22,5c,03,bd,b9,3c,97",
+#     "hardwareRevision": "1.3",
+#     "openDirection": 2,
+#     "lockVersion": {
+#         "groupId": 10,
+#         "protocolVersion": 3,
+#         "protocolType": 5,
+#         "orgId": 67,
+#         "scene": 2
+#     },
+#     "sensitivity": 0
+# }
+
+###Delete lock
+
+POST https://euapi.sciener.com/v3/lock/delete
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+   " lockId ":"6523400",
+   "date":"1663136040553"
+}
+
+
+
+
+# {
+#     "errcode": 0,
+#     "errmsg": "none error message or means yes",
+#     "description": "表示成功或是"
+# }
+
+###Update lock data(reset ekey)
+
+
+POST https://euapi.sciener.com/v3/lock/updateLockData
+content-type: application/json
+
+###Set auto lock time
+POST https://euapi.sciener.com/v3/lock/setAutoLockTime
+content-type: application/json
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+   " lockId ":"6523400",
+   "seconds":"10",
+   "type":"2",
+   "date":"1663136040553"
+}

@@ -1,0 +1,139 @@
+### Send ekey
+POST https://euapi.sciener.com/v3/key/send
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "receiverUsername":"kengxiong36@gmail.com",
+    "keyName":"keng",
+    "startDate":"1663834010100",
+    "endDate":"1663834010100",
+    "remarks":,
+    "remoteEnable":"cccc",
+    "keyRight":"0",
+    "createUser":,
+    "date":"1663834010100"
+}
+
+
+
+
+
+ ###Get the eKey list of an account
+ POST https://euapi.sciener.com/v3/key/list
+ content-type: application/json
+{
+   "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+   "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+   "lockAlias":,
+   "groupId":"",
+   "pageNo":"1",
+   "pageSize":"20",
+   "date":"747934938240",
+}
+
+
+
+
+#  {
+#     "total": 1,
+#     "pages": 1,
+#     "pageNo": 1,
+#     "pageSize": 20,
+#     "list": [
+#         {
+#             "date": 1662538975000,
+#             "specialValue": 566546933,
+#             "lockAlias": "XNK3_969729",
+#             "keyStatus": "110401",
+#             "endDate": 0,
+#             "noKeyPwd": "887247360",
+#             "keyId": 65074890,
+#             "lockMac": "E8:70:71:29:97:96",
+#             "deletePwd": "",
+#             "timezoneRawOffset": 25200000,
+#             "featureValue": "10021C4D1F5",
+#             "lockId": 6523400,
+#             "electricQuantity": 100,
+#             "lockData": "kfRHEPts2FJOSuTgvQEjwrdZ51YTgWSxXYc9U3vAZ8uRDtazmBKHIDqJNr0/N0t/kHY1FzNhhTbG8rzgFFLEL2zWi0bKySoZW3fcZvJwTjLHrk2rQ315+xVJ8yJbjSBmhV9qu2yXEOTnYoDm5HpNIxcPdJzdv6QDcFATItu1DYJqopdlX1ixWLCL/kL1UKwDwvPi+r4WoG9VVUtQK8k5PfzpGZC8Zg8JgVpbfx21MVzyQofjSD+f7kGryUc+JHI+4ktYQEXW+1GIkUrKh/RA7jbtjVkW90njtPX0XkyQzv8InCInJq4+kS07O5DJJqMWVYHGGhdzCqfnI7BBiRbIHu/I8PL4S4Rcs5AzvG02IoeEHX0hYLsDtKig0WImc/UkfN0hAU5Njelyb5h+jhyxpfzTbyeA/JmQTDO9tm2VruxNOmJEMYbD80CfwMtmMaI+o3kVaoLq/mHHVcL7L8kPuuaLc+xq/Yy7zZ+ET9DJUjJIbCsSosjkaEt+/K+nWg+OOc//Di620s+i+whq4uGay1cQwKY4Apf9fJ5qL4RYxzKbdtiWCzjdGWbkm/vMziuanLyRvzohnBtY25H2IaTZlU55zdhFtyqEZtDdTfDJxGhAqh3Ip17+/eBVV7vGfymyh9A1rUFT7Eq8enxRSPvicbpzdqcYRVnZfioKXTaH3weCc4oP2l1GEDc5OBPAojHr66//AHpkds07f/sZni/nzZ896iZvCKvfBIlfsBOdz2J7jYGK5QZ/2GGQeRajKqxK6HBxKZeW",
+#             "keyboardPwdVersion": 4,
+#             "remoteEnable": 2,
+#             "wirelessKeypadFeatureValue": "0",
+#             "lockVersion": {
+#                 "showAdminKbpwdFlag": true,
+#                 "groupId": 10,
+#                 "protocolVersion": 3,
+#                 "protocolType": 5,
+#                 "orgId": 67,
+#                 "logoUrl": "",
+#                 "scene": 2
+#             },
+#             "userType": "110301",
+#             "lockName": "XNK3_969729",
+#             "startDate": 0,
+#             "remarks": "",
+#             "keyRight": 0
+#         }
+#     ]
+# }
+
+###Get one ekey
+GET  https://euapi.sciener.com/v3/key/get?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&lockId=6523400&date=1663834872422
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "date":"1663834872422"
+}
+
+
+
+
+
+
+
+###response
+# {
+#     "date": 1662538975000,
+#     "specialValue": 566546933,
+#     "lockAlias": "XNK3_969729",
+#     "keyStatus": "110401",
+#     "endDate": 0,
+#     "noKeyPwd": "887247360",
+#     "keyId": 65074890,
+#     "lockMac": "E8:70:71:29:97:96",
+#     "deletePwd": "",
+#     "timezoneRawOffset": 25200000,
+#     "featureValue": "10021C4D1F5",
+#     "lockId": 6523400,
+#     "electricQuantity": 100,
+#     "lockData": "kfRHEPts2FJOSuTgvQEjwrdZ51YTgWSxXYc9U3vAZ8uRDtazmBKHIDqJNr0/N0t/kHY1FzNhhTbG8rzgFFLEL2zWi0bKySoZW3fcZvJwTjLHrk2rQ315+xVJ8yJbjSBmhV9qu2yXEOTnYoDm5HpNIxcPdJzdv6QDcFATItu1DYJqopdlX1ixWLCL/kL1UKwDwvPi+r4WoG9VVUtQK8k5PfzpGZC8Zg8JgVpbfx21MVzyQofjSD+f7kGryUc+JHI+4ktYQEXW+1GIkUrKh/RA7jbtjVkW90njtPX0XkyQzv8InCInJq4+kS07O5DJJqMWVYHGGhdzCqfnI7BBiRbIHu/I8PL4S4Rcs5AzvG02IoeEHX0hYLsDtKig0WImc/UkBQLtC46WAFwnjkz64UdXZI1vJl80XBLnwOzaJUB0DNxl0DDNKJfIYwukaixYDRuHxW+cPYxq5iK7kyWAHDo8J7AQHYBdMdfqt6eTlPPm9rHH3SxUpat5f7tXZoksxP5acY6iY+DYYkp1FCvk2YcdzjfUMUyZxzRDwOTIcDvXjGY8Zw02VDepdxldqAVHbb9OzTDl7S6NUavIZgdJPhMkjOERhkcQUm3bGB6AI4Hd8/aqvo0GM4T406aAcOzBLubNaLWOvdJKCUjzN3vHUQrKZK0wBCdCyZXYp1C94LKQT7+z03HlkiGW5zWBHMRmrYtBEfXDuHu/7yFopoXBsknVEuhwcSmXlg==",
+#     "keyboardPwdVersion": 4,
+#     "remoteEnable": 2,
+#     "lockVersion": {
+#         "showAdminKbpwdFlag": true,
+#         "groupId": 10,
+#         "protocolVersion": 3,
+#         "protocolType": 5,
+#         "orgId": 67,
+#         "logoUrl": "",
+#         "scene": 2
+#     },
+#     "userType": "110301",
+#     "lockName": "XNK3_969729",
+#     "startDate": 0,
+#     "remarks": "",
+#     "keyRight": 0
+# }
+
+###Get ekeys of a lock
+
+GET https://euapi.sciener.com/v3/lock/listKey?clientId=fd2ff35ee3d8424c8665c07b7b9a7f45&accessToken=780f7671b6e6be3010d9787f19207aca&lockId=1719&pageNo=1&pageSize=20&date=1625025703000
+content-type: application/json
+###Delete the ekey
+POST https://euapi.sciener.com/v3/key/delete
+content-type: application/json

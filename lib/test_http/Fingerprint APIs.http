@@ -1,0 +1,179 @@
+###Add fingerprint
+POST https://euapi.sciener.com/v3/fingerprint/add
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "fingerprintNumber":"46988432834560",
+    "fingerprintType":"1",
+    "fingerprintName":"sai",
+    "startDate":"1663837616531",
+    "endDate":"1663837616531",
+    "cyclicConfig":"",
+    "date":"1663837616531"
+}
+
+
+
+
+# ###response
+# {
+#     "fingerprintId": 9414840
+# }
+
+###Get the fingerprint list of a lo
+
+GET https://euapi.sciener.com/v3/fingerprint/list?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&lockId=6523400&pageNo=1&pageSize=100&date=1663837889968
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "pageNo":"1",
+    "pageSize":"100",
+    "date":"1663837889968"
+}
+###response
+# {
+#     "total": 1,
+#     "pages": 1,
+#     "pageNo": 1,
+#     "pageSize": 100,
+#     "list": [
+#         {
+#             "lockId": 6523400,
+#             "fingerprintType": 1,
+#             "fingerprintNumber": "46988432834560",
+#             "fingerprintName": "sai",
+#             "endDate": 1663649048070,
+#             "nickName": "yeejyag27@gmail.com",
+#             "fingerprintId": 9414840,
+#             "userId": "+8562077912908",
+#             "startDate": 1663649048070,
+#             "senderUsername": "+8562077912908",
+#             "createDate": 1663649069000,
+#             "status": 1
+#         }
+#     ]
+# }
+
+
+###Delete fingerprint
+
+POST https://euapi.sciener.com/v3/fingerprint/delete 
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "fingerprintId":"9414840",
+    "deleteType":"",
+    "date":"1663838036121"
+}
+
+
+
+
+
+###response
+# {
+#     "total": 1,
+#     "pages": 1,
+#     "pageNo": 1,
+#     "pageSize": 100,
+#     "list": [
+#         {
+#             "lockId": 6523400,
+#             "fingerprintType": 1,
+#             "fingerprintNumber": "46988432834560",
+#             "fingerprintName": "sai",
+#             "endDate": 1663649048070,
+#             "nickName": "yeejyag27@gmail.com",
+#             "fingerprintId": 9414840,
+#             "userId": "+8562077912908",
+#             "startDate": 1663649048070,
+#             "senderUsername": "+8562077912908",
+#             "createDate": 1663649069000,
+#             "status": 1
+#         }
+#     ]
+# }
+
+###Delete fingerprint
+
+POST  https://euapi.sciener.com/v3/fingerprint/delete
+content-type: application/json
+
+
+
+
+
+###response
+# {
+#     "errcode": 0,
+#     "errmsg": "none error message or means yes",
+#     "description": "表示成功或是"
+# }
+
+###Change the period of validity 
+POST https://euapi.sciener.com/v3/fingerprint/changePeriod
+content-type: application/json
+
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "fingerprintId":"9414840",
+    "startDate":"1663838500707",
+    "endDate":"1663838500707",
+    "cyclicConfig":"4",
+    "changeType":"",
+    "date":"1663838500707"
+}
+
+
+
+###Clear fingerprint
+POST https://euapi.sciener.com/v3/fingerprint/clear
+content-type: application/json
+
+
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "date":"1663838500707",
+}
+
+###response
+# {
+#     "errcode": 0,
+#     "errmsg": "none error message or means yes",
+#     "description": "表示成功或是"
+# }
+
+###Rename fingerprint
+POST  https://euapi.sciener.com/v3/fingerprint/rename
+content-type: application/json
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "fingerprintId":"9414840",
+    "fingerprintName":"sai",
+    "date":"1663838826092",
+}
+
+
+###response
+# {
+#     "errcode": -1023,
+#     "errmsg": "This Fingerprint does not exist.",
+#     "description": "该指纹已不存在"
+# }

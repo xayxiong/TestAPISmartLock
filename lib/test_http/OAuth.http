@@ -1,0 +1,36 @@
+###Get access token
+POST https://euapi.sciener.com/oauth2/token
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "username":"+8562077912908",
+    "password":"bfc6f193a5dbad9f53a37afbddecd81c",
+    "client_secret":"755b2f580dbb58cbd7bdb8820b7bb706"
+}
+
+
+###response
+# {
+#     "access_token": "f1611d9a718cb6df1b63dab1870c2cf8",
+#     "refresh_token": "8e35975ee600a7052398830a7d8c4f09",
+#     "uid": 11908934,
+#     "openid": 1144291327,
+#     "scope": "user,key,room",
+#     "token_type": "Bearer",
+#     "expires_in": 7093546
+# }
+
+
+###Refresh access token
+POST https://euapi.sciener.com/oauth2/token
+content-type: application/json
+
+{
+"clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+"clientSecret":"755b2f580dbb58cbd7bdb8820b7bb706",
+"grant_type":"f1611d9a718cb6df1b63dab1870c2cf8",
+"refresh_token":"f1611d9a718cb6df1b63dab1870c2cf8"
+}
+

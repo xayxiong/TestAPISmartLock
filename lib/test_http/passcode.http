@@ -1,0 +1,164 @@
+
+###Get a random passcode
+POST https://euapi.sciener.com/v3/keyboardPwd/get
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "keyboardPwdType":"1",
+    "keyboardPwdName":"sai",
+    "startDate":"1663835841518",
+    "endDate":"1663835841518",
+    "date":"1663835841518",
+}
+
+
+
+###response
+# {
+#     "keyboardPwdId": 198814616,
+#     "keyboardPwd": "35342319"
+# }
+
+
+###Add a custom passcode
+POST https://euapi.sciener.com/v3/keyboardPwd/add
+content-type: application/json
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "keyboardPwd":"35342319",
+    "keyboardPwdName":"sai",
+    "startDate":"1663836177024",
+    "endDate":"1663836177024",
+    "addType":"",
+    "date":"1663836177024"
+}
+
+
+
+
+
+# {
+#     "keyboardPwdId": 198817846
+# }
+
+###Get all created passcodes of a
+GET https://euapi.sciener.com/v3/lock/listKeyboardPwd?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&lockId=6523400&pageNo=1&pageSize=100&date=1663836567739
+content-type: application/json
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "pageNo":"1",
+    "pageSize":"100",
+    "date":"1663836567739"
+}
+
+
+
+
+
+###response
+# {
+#     "list": [
+#         {
+#             "endDate": 1663646414905,
+#             "sendDate": 1663646452000,
+#             "keyboardPwdId": 198817846,
+#             "nickName": "yeejyag27@gmail.com",
+#             "keyboardPwdType": 3,
+#             "lockId": 6523400,
+#             "keyboardPwdVersion": 4,
+#             "isCustom": 1,
+#             "keyboardPwdName": "sai",
+#             "keyboardPwd": "35342319",
+#             "startDate": 1663646414905,
+#             "senderUsername": "+8562077912908",
+#             "receiverUsername": "",
+#             "status": 1
+#         },
+#         {
+#             "endDate": 1663642800000,
+#             "sendDate": 1663645874000,
+#             "keyboardPwdId": 198814616,
+#             "nickName": "yeejyag27@gmail.com",
+#             "keyboardPwdType": 1,
+#             "lockId": 6523400,
+#             "keyboardPwdVersion": 4,
+#             "isCustom": 0,
+#             "keyboardPwdName": "sai",
+#             "keyboardPwd": "35342319",
+#             "startDate": 1663642800000,
+#             "senderUsername": "+8562077912908",
+#             "receiverUsername": "",
+#             "status": 1
+#         },
+#         {
+#             "endDate": 0,
+#             "sendDate": 1663643714000,
+#             "keyboardPwdId": 198803794,
+#             "nickName": "yeejyag27@gmail.com",
+#             "keyboardPwdType": 2,
+#             "lockId": 6523400,
+#             "keyboardPwdVersion": 4,
+#             "isCustom": 0,
+#             "keyboardPwdName": "sai",
+#             "keyboardPwd": "22694231",
+#             "startDate": 1663642800000,
+#             "senderUsername": "+8562077912908",
+#             "receiverUsername": "",
+#             "status": 1
+#         }
+#     ],
+#     "pageNo": 1,
+#     "pageSize": 100,
+#     "pages": 1,
+#     "total": 3
+# }
+###Delete one passcode
+POST https://euapi.sciener.com/v3/keyboardPwd/delete
+content-type: application/json
+
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "lockId":"6523400",
+    "keyboardPwdId":"198814616",
+    "deleteType":"",
+    "date":"1663836770106"
+}
+
+
+
+
+
+###
+###response
+# {
+#     "errcode": 0,
+#     "errmsg": "none error message or means yes",
+#     "description": "表示成功或是"
+# }
+
+###Change passcode
+
+POST https://euapi.sciener.com/v3/keyboardPwd/change
+content-type: application/json
+
+
+
+
+
+
+
+###response
+# {
+#     "errcode": 0,
+#     "errmsg": "none error message or means yes",
+#     "description": "表示成功或是"
+# }

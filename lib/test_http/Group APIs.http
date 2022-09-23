@@ -1,0 +1,56 @@
+###Add Group
+
+POST https://euapi.sciener.com/v3/group/add
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "name":"XAIGroupAAA",
+    "date":"1663840234434"
+}
+
+
+
+
+
+
+
+
+
+###response
+# {
+#     "groupId": 402086
+# }
+
+###Get the fingerprint list of a lock
+
+GET https://euapi.sciener.com/v3/group/list?clientId=24bd4a0e257a48f1a32b20b52cfbe6db&accessToken=f1611d9a718cb6df1b63dab1870c2cf8&date=1663839918771
+content-type: application/json
+
+{
+    "clientId":"24bd4a0e257a48f1a32b20b52cfbe6db",
+    "accessToken":"f1611d9a718cb6df1b63dab1870c2cf8",
+    "date":"1663839918771",
+}
+
+
+
+####
+
+###response
+# {
+#     "list": [
+#         {
+#             "groupName": "saixong",
+#             "groupId": 397944
+#         },
+#         {
+#             "groupName": "XAIGroup ",
+#             "groupId": 402086
+#         }
+#     ]
+# }
+
+
+###Set the group of a lock
